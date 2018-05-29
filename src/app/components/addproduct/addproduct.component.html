@@ -1,0 +1,45 @@
+
+    <div fxLayout="column"  class="product-container">
+      <div class="header" fxLayoutAlign="center center">
+          <span class="text-heading">Add Product</span>
+      </div>  
+      <div class="example-form"  fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+         
+        <mat-form-field class="example-full-width">
+           
+                <mat-select placeholder="Category" [(ngModel)]="category">
+                  <mat-option *ngFor="let CategoryList of categoryList" [value]="CategoryList.value" >
+                    {{ CategoryList.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                  <mat-select placeholder="Brand" [(ngModel)]="brand">
+                    <mat-option *ngFor="let Brand of brandList" [value]="Brand.value" >
+                      {{ Brand.viewValue }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+            <mat-form-field class="example-full-width" >
+              <input matInput placeholder="Model Number" [(ngModel)]="modelno">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input  matInput type="number" placeholder="Price" [(ngModel)]="price">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input  matInput type="number" placeholder="Stock Count" [(ngModel)]="count">
+              </mat-form-field>
+              
+                  <input  (change)="selectFile($event)" type="file" placeholder="Picture">
+                  <br>
+                  
+            </div>
+            <div  fxFlex="10" fxLayoutAlign="center">
+              <button  mat-raised-button color="primary" (click)="upload()">Upload</button>
+             
+            </div>
+           
+           <br>
+      </div>
+  
+    

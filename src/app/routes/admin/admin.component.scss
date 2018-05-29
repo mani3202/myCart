@@ -1,0 +1,30 @@
+mat-sidenav {
+    width: 266px ;
+    background: #fbfbfb;
+    border: 1px solid #dcdcdc;
+    
+  }
+  
+  
+    .example-container {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background:#F5F5F5;
+      top: 64px;
+      bottom: 50px;
+      left: 0;
+      right: 0;
+    }
+    
+    
+    h1.example-app-name {
+      margin-left: 8px;
+    }
+    
+    .admin-content
+    {
+      padding: 24px;
+      background: #F5F5F5;
+    }
+    
